@@ -1,0 +1,109 @@
+Bedienung der ChickenBox
+
+Kabelverbindungen und Vorbereitung
+
+Anschluss der Kabel
+
+Schließen Sie alle erforderlichen Kabel an. Stellen Sie zum Schluss die Verbindung von der 
+
+Steuereinheit zum Notebook/PC via USB-Kabel her. Die Steuereinheit der ChickenBox schaltet sich 
+
+dann ein. Das Laden des Datensatzes von SD-Karte erfolgt automatisch und dauert nur wenige 
+
+Sekunden. 
+
+Vorbereitungen für das Loggen von Daten
+
+Das Programm „Gobetwino“ muss auf dem PC installiert sein. In „Gobetwino“ muss der Befehl 
+
+CHICKENLOG erstellt werden, wenn nicht bereits vorhanden. Gehen Sie dazu in „Gobetwino“ unter 
+
+„Commands“ auf „New Command“ und benutzen Sie folgende Parameter. Command Type: LGFIL, 
+
+Command Name: CHICKENLOG, File:  <Pfad zu ihrer Chickenlog.csv>. 
+
+Letztgenannte Datei (chickenlog.csv) muss zwingend vorhanden sein und darf während des Loggens 
+
+nicht auf dem PC geöffnet sein, da dann der Schreibzugriff auf die Datei für die ChickenBox gesperrt 
+
+ist. Wenn die Datei nicht vorhanden ist, dann erstellen Sie einfach eine Textdatei mit der Endung 
+
+„.csv“ anstatt „.txt“.
+
+Geloggt werden die Daten in folgender Reihenfolge: Nr. des jeweiligen Huhns, Programm, 
+
+Durchgang, Picks, x,y, Zeit (in ms), timewarp (in ms).
+
+Checkliste unmittelbar vor dem Experiment
+
+- Gobetwino auf dem PC gestartet?
+
+- Ist der Befehl CHICKENLOG bereits angelegt und verweist auf die Datei chickenlog.csv?
+
+- Ist der richtige COM-Port in Gobetwino eingestellt?
+
+- Ist chickenlog.csv vorhanden, jedoch nicht geöffnet?
+
+Navigation durch das Menü
+
+Tastenerklärung
+
+Große Taste: <Auswahl>
+
+Kleine Taster: <links> bzw. <rechts>
+
+Menü 1 - Modusauswahl 
+
+Mit <links> bzw. <rechts> den gewünschten Modus einstellen und mit <Auswahl> auswählen.
+
+Achtung! Wenn Sie im Menü 1 <links> und <Auswahl> gleichzeitig drücken und anschließend sofort 
+
+<rechts> für eine Sekunde drücken, wird der Speicher mit der gespeicherten Anzahl Durchgänge 
+
+zurückgesetzt!
+
+Menü 2 - Auswahl Huhn
+
+Die Nummer des gewünschten Huhnes mit <links> bzw. <rechts> einstellen. Der ausgewählte Modus 
+
+und die Anzahl der Durchgänge werden ebenfalls im Menü dargestellt. Die Anzahl der Durchgänge im 
+
+jeweiligen Modus steht zu Beginn, dahinter in Klammern die Anzahl der Durchgänge für jedes der 
+
+einzelne Modi (Normal, Auto, Dis+, Dis-) für das ausgewählte Huhn. Bestätigen Sie die Nummer des 
+
+gewählten Huhns mit <Auswahl>. Das Programm startet dann in den gewählten Modus. 
+
+Tipp: Wenn Sie <links> und <rechts> gleichzeitig drücken, gelangen Sie zurück in Menü 1!
+
+Kurzbeschreibung der Programm-Modi:
+
+Normal:
+
+Beleuchtung an, jeder Pick wird belohnt und geloggt. Abbruch des Programms und zurück in das 
+
+Menü 1 durch <Auswahl>.
+
+Autoshaping
+
+30 s Pause unterbrechbar, 10 s Stimulus unterbrechbar, 5 s Futterphase mit Futtergabe, 30 s Pause. 
+
+Das Programm ist nicht unterbrechbar.
+
+Diskriminationslernen belohnt (Diskr.+)
+
+30 s Pause unterbrechbar, 10 s Stimulus unterbrechbar nach 5 s unterbrechbar, 5 s Futterphase mit 
+
+Futtergabe, 30 s Pause. Das Programm ist nicht unterbrechbar.
+
+Diskriminationslernen belohnt (Diskr.-)
+
+30 s Pause unterbrechbar, 10 s Stimulus unterbrechbar nach 5 s unterbrechbar, 5 s Futterphase ohne 
+
+Futtergabe, 30 s Pause. Das Programm ist nicht unterbrechbar.
+
+Nach jedem Programmdurchlauf werden die Anzahl der Durchgänge in den einzelnen Programmen 
+
+für jedes Huhn als Datensatz auf SD-Karte gespeichert, so dass sie bei einem Neustart geladen 
+
+werden können (das geschieht automatisch).
